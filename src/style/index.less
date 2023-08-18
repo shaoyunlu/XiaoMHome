@@ -23,6 +23,7 @@
     --code-tooltip-bg-color: var(--code-bg-color);
     --code-tooltip-color: #0c61c9;
     --nav-z-index: 12;
+    --link-active-bg-color: rgba(var(--xmv-color-primary-rgb), .1);
 }
 
 html{
@@ -184,6 +185,10 @@ main {
     line-height: 1.5;
     font-size: .9rem;
     border-radius: 8px;
+}
+
+.link.active {
+    background-color: var(--link-active-bg-color);
 }
 
 .link-text {

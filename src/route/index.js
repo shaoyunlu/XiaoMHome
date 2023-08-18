@@ -9,6 +9,7 @@ import scrollbarVue from 'comp/scrollbar/index.vue'
 import spaceVue from 'comp/space/index.vue'
 import checkboxVue from 'comp/checkbox/index.vue'
 import colorPickerVue from 'comp/colorPicker/index.vue'
+import datePickerVue from 'comp/datePicker/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -18,7 +19,8 @@ const routes = [
     { path : '/scrollbar',component : scrollbarVue },
     { path : '/space',component : spaceVue },
     { path : '/checkbox',component : checkboxVue },
-    { path : '/colorPicker',component : colorPickerVue }
+    { path : '/colorPicker',component : colorPickerVue },
+    { path : '/datePicker',component : datePickerVue }
 ]
 
 const router= createRouter({

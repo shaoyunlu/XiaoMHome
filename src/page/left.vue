@@ -18,6 +18,9 @@
                     <a href="#/colorPicker" class="link">
                         <p class="link-text">Color Picker 取色器</p>
                     </a>
+                    <a href="#/datePicker" class="link">
+                        <p class="link-text">Date Picker 日期选择器</p>
+                    </a>
                 </section>
             </div>
         </aside>
