@@ -28,14 +28,13 @@
     <p>支持图标作为参数传到组件中来</p>
 
     <div class="demo-icon-item">
-        <div class="demo-icon-title">以字母先后顺序进行展示</div>
         <pre style="font-size: 14px;margin: 0;">
             <code class="language-javascript" 
                 style="display: block;margin-left:-100px;margin-top: -30px;margin-bottom: -60px;">
                 {{ 
                     `
                         import userIcon from './userIcon.vue'
-                        <xmv-icon :icon="userIcon"></xmv-icon>
+                        <xmv-icon :name="userIcon"></xmv-icon>
                     ` 
                 }}
             </code>
@@ -43,7 +42,7 @@
         <ul class="demo-icon-list">
             <li class="icon-item">
                 <span class="demo-svg-icon">
-                    <xmv-icon :icon="userIcon"></xmv-icon>
+                    <xmv-icon :name="userIcon"></xmv-icon>
                     <span class="icon-name">userIcon</span>
                 </span>
             </li>
