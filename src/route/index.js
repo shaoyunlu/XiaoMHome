@@ -12,6 +12,7 @@ import colorPickerVue from 'comp/colorPicker/index.vue'
 import datePickerVue from 'comp/datePicker/index.vue'
 import inputVue from 'comp/input/index.vue'
 import inputNumberVue from 'comp/inputNumber/index.vue'
+import radioVue from 'comp/radio/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -24,7 +25,8 @@ const routes = [
     { path : '/colorPicker',component : colorPickerVue },
     { path : '/datePicker',component : datePickerVue },
     { path : '/input',component : inputVue },
-    { path : '/inputNumber',component : inputNumberVue }
+    { path : '/inputNumber',component : inputNumberVue },
+    { path : '/radio',component : radioVue }
 ]
 
 const router= createRouter({
