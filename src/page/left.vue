@@ -24,6 +24,9 @@
                     <a href="#/input" class="link">
                         <p class="link-text">Input 输入框</p>
                     </a>
+                    <a href="#/inputNumber" class="link">
+                        <p class="link-text">Input Number 输入框</p>
+                    </a>
                 </section>
             </div>
         </aside>
