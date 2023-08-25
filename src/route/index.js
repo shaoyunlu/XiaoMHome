@@ -14,6 +14,7 @@ import inputVue from 'comp/input/index.vue'
 import inputNumberVue from 'comp/inputNumber/index.vue'
 import radioVue from 'comp/radio/index.vue'
 import selectVue from 'comp/select/index.vue'
+import sliderVue from 'comp/slider/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -28,7 +29,8 @@ const routes = [
     { path : '/input',component : inputVue },
     { path : '/inputNumber',component : inputNumberVue },
     { path : '/radio',component : radioVue },
-    { path : '/select',component : selectVue }
+    { path : '/select',component : selectVue },
+    { path : '/slider',component : sliderVue }
 ]
 
 const router= createRouter({

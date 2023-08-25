@@ -33,6 +33,9 @@
                     <a href="#/select" class="link">
                         <p class="link-text">Select 选择器</p>
                     </a>
+                    <a href="#/slider" class="link">
+                        <p class="link-text">Slider 滑块</p>
+                    </a>
                 </section>
             </div>
         </aside>
