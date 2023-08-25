@@ -30,6 +30,9 @@
                     <a href="#/radio" class="link">
                         <p class="link-text">Radio 单选框</p>
                     </a>
+                    <a href="#/select" class="link">
+                        <p class="link-text">Select 选择器</p>
+                    </a>
                 </section>
             </div>
         </aside>
