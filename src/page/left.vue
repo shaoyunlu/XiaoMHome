@@ -36,6 +36,9 @@
                     <a href="#/slider" class="link">
                         <p class="link-text">Slider 滑块</p>
                     </a>
+                    <a href="#/switch" class="link">
+                        <p class="link-text">Switch 开关</p>
+                    </a>
                 </section>
             </div>
         </aside>
