@@ -139,7 +139,7 @@
     <xmv-code :code="code_5">
         <xmv-row>
             <xmv-col>
-                <xmv-button loadingButton icon="loading" type="primary" 
+                <xmv-button loading-button icon="loading" type="primary" 
                             :loading="btnLoading" @click="handleLoading">Loading</xmv-button>
             </xmv-col>
         </xmv-row>
@@ -290,7 +290,7 @@ export default defineComponent({
         let code_5 = 
                             `
                                 // loadingButton 是必填属性
-                                <xmv-button loadingButton icon="loading" type="primary" 
+                                <xmv-button loading-button icon="loading" type="primary" 
                                         :loading="btnLoading" @click="handleLoading">Loading</xmv-button>
 
                                 const btnLoading = ref(false)
