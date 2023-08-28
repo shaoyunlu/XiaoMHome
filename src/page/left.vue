@@ -39,6 +39,9 @@
                     <a href="#/switch" class="link">
                         <p class="link-text">Switch 开关</p>
                     </a>
+                    <a href="#/timePicker" class="link">
+                        <p class="link-text">Time Picker 时间选择器</p>
+                    </a>
                 </section>
             </div>
         </aside>

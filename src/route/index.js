@@ -16,6 +16,7 @@ import radioVue from 'comp/radio/index.vue'
 import selectVue from 'comp/select/index.vue'
 import sliderVue from 'comp/slider/index.vue'
 import switchVue from 'comp/switch/index.vue'
+import timePickerVue from 'comp/timePicker/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -32,7 +33,8 @@ const routes = [
     { path : '/radio',component : radioVue },
     { path : '/select',component : selectVue },
     { path : '/slider',component : sliderVue },
-    { path : '/switch',component : switchVue }
+    { path : '/switch',component : switchVue },
+    { path : '/timePicker',component : timePickerVue }
 ]
 
 const router= createRouter({
