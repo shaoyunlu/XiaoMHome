@@ -58,6 +58,23 @@
             </xmv-card>
         </xmv-space>
     </xmv-code>
+    <h2>填充容器</h2>
+    <p>通过 <code>fill</code>**（布尔类型）**参数，您可以控制子节点是否自动填充容器。</p>
+    <p>下面的例子中，当设置为 <code>fill</code> 时，子节点的宽度会自动适配容器的宽度。</p>
+    <p text="sm"><p>用 fill 属性让子节点自动填充容器</p></p>
+    <xmv-code :code="code_4">
+        <div>
+            <div style="margin-bottom: 15px">fill: <xmv-switch v-model="fill" /></div>
+            <xmv-space :fill="fill">
+                <xmv-card v-for="tmp in arr">
+                    <template #header>
+                        标题{{ tmp }}
+                    </template>
+                    <div class="demo-card-body">内容{{ tmp }}</div>
+                </xmv-card>
+            </xmv-space>
+        </div>
+    </xmv-code>
 </template>
 
 <script>
@@ -70,6 +87,7 @@ export default defineComponent({
         const sizeNumRef = ref(12)
         const arr = [1,2,3]
         const sizeRef = ref('large')
+        const fill = ref(false)
         let code_1 = 
                         `
                             // JS
@@ -121,7 +139,25 @@ export default defineComponent({
                                 </xmv-space>
                             </xmv-space> 
                         `
-        return {sizeRef ,arr ,code_1 ,code_2 ,code_3 ,sizeNumRef}
+        let code_4 =
+                        `
+                            // JS
+                            const fill = ref(false)
+                            // Template
+                            <div>
+                                <div style="margin-bottom: 15px">fill: <xmv-switch v-model="fill" /></div>
+                                <xmv-space :fill="fill">
+                                    <xmv-card v-for="tmp in arr">
+                                        <template #header>
+                                            标题{{ tmp }}
+                                        </template>
+                                        <div class="demo-card-body">内容{{ tmp }}</div>
+                                    </xmv-card>
+                                </xmv-space>
+                            </div>
+                        `
+        return {sizeRef ,arr ,code_1 ,code_2 ,code_3 ,code_4,
+                sizeNumRef ,fill}
     }
 })
 </script>
