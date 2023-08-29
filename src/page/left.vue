@@ -42,6 +42,9 @@
                     <a href="#/timePicker" class="link">
                         <p class="link-text">Time Picker 时间选择器</p>
                     </a>
+                    <a href="#/upload" class="link">
+                        <p class="link-text">Upload 上传</p>
+                    </a>
                 </section>
             </div>
         </aside>

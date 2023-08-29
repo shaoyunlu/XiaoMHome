@@ -63,7 +63,7 @@ export default defineComponent({
             'download' ,'edit' ,'hide' ,'infoFilled' ,'loading' , 'lineChart','message' ,'minus',
             'download' ,'edit' ,'hide' ,'infoFilled' ,'loading' ,'message' ,'minus',
             'moreFilled' ,'plus' , 'pieChart','refresh' ,'search' ,'setting' ,'sort' ,'star',
-            'successFilled' ,'upload' ,'vew' ,'warningFilled' ,'zoomIn' ,'zoomOut'
+            'successFilled' ,'upload','uploadFilled' ,'vew' ,'warningFilled' ,'zoomIn' ,'zoomOut'
         ]
 
         const capitalizeFirstLetter = (str)=>{
