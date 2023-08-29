@@ -46,6 +46,12 @@
                         <p class="link-text">Upload 上传</p>
                     </a>
                 </section>
+                <section class="sidebar-group">
+                    <p class="sidebar-group__title">Data 数据展示</p>
+                    <a href="#/card" class="link">
+                        <p class="link-text">Card 卡片</p>
+                    </a>
+                </section>
             </div>
         </aside>
     </xmv-scrollbar>

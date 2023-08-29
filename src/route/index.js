@@ -18,6 +18,7 @@ import sliderVue from 'comp/slider/index.vue'
 import switchVue from 'comp/switch/index.vue'
 import timePickerVue from 'comp/timePicker/index.vue'
 import uploadVue from 'comp/upload/index.vue'
+import cardVue from 'comp/card/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -36,7 +37,8 @@ const routes = [
     { path : '/slider',component : sliderVue },
     { path : '/switch',component : switchVue },
     { path : '/timePicker',component : timePickerVue },
-    { path : '/upload',component : uploadVue }
+    { path : '/upload',component : uploadVue },
+    { path : '/card',component : cardVue }
 ]
 
 const router= createRouter({
