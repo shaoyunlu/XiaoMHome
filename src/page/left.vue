@@ -51,6 +51,9 @@
                     <a href="#/card" class="link">
                         <p class="link-text">Card 卡片</p>
                     </a>
+                    <a href="#/carousel" class="link">
+                        <p class="link-text">Carousel 走马灯</p>
+                    </a>
                 </section>
             </div>
         </aside>
