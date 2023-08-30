@@ -1,6 +1,7 @@
 import { defineConfig } from "vite"
 import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
+import legacy from '@vitejs/plugin-legacy'
 
 
 export default defineConfig({
@@ -12,7 +13,9 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-
+    legacy({
+        targets : ['firefox 43']
+    })
   ],
   server: {
     // 配置服务器

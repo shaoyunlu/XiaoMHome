@@ -1,5 +1,6 @@
 <template>
-    <xmv-scrollbar class="sidebar">
+    <div class="sidebar">
+    <xmv-scrollbar >
         <aside>
             <div class="sidebar-groups">
                 <section class="sidebar-group">
@@ -58,6 +59,7 @@
             </div>
         </aside>
     </xmv-scrollbar>
+    </div>
 </template>
 
 <script>
