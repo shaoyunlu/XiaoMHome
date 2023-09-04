@@ -55,6 +55,9 @@
                     <a href="#/carousel" class="link">
                         <p class="link-text">Carousel 走马灯</p>
                     </a>
+                    <a href="#/collapse" class="link">
+                        <p class="link-text">Collapse 折叠面板</p>
+                    </a>
                 </section>
             </div>
         </aside>

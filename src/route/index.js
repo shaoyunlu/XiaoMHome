@@ -20,6 +20,7 @@ import timePickerVue from 'comp/timePicker/index.vue'
 import uploadVue from 'comp/upload/index.vue'
 import cardVue from 'comp/card/index.vue'
 import carouselVue from 'comp/carousel/index.vue'
+import collapseVue from 'comp/collapse/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -40,7 +41,8 @@ const routes = [
     { path : '/timePicker',component : timePickerVue },
     { path : '/upload',component : uploadVue },
     { path : '/card',component : cardVue },
-    { path : '/carousel',component : carouselVue }
+    { path : '/carousel',component : carouselVue },
+    { path : '/collapse',component : collapseVue }
 ]
 
 const router= createRouter({
