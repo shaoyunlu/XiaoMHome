@@ -49,6 +49,9 @@
                 </section>
                 <section class="sidebar-group">
                     <p class="sidebar-group__title">Data 数据展示</p>
+                    <a href="#/badge" class="link">
+                        <p class="link-text">Badge 徽章</p>
+                    </a>
                     <a href="#/card" class="link">
                         <p class="link-text">Card 卡片</p>
                     </a>
