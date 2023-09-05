@@ -61,6 +61,9 @@
                     <a href="#/collapse" class="link">
                         <p class="link-text">Collapse 折叠面板</p>
                     </a>
+                    <a href="#/descriptions" class="link">
+                        <p class="link-text">Descriptions 描述列表</p>
+                    </a>
                 </section>
             </div>
         </aside>

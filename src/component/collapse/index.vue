@@ -84,9 +84,9 @@ import {defineComponent, ref} from 'vue'
 export default defineComponent({
     name:"",
     setup(props ,context) {
-        const collapse1 = ref(1)
-        const collapse2 = ref(2)
-        const collapse3 = ref(1)
+        const collapse1 = ref('1')
+        const collapse2 = ref('2')
+        const collapse3 = ref('1')
 
         let code_1 =
                         `

@@ -22,6 +22,7 @@ import cardVue from 'comp/card/index.vue'
 import badgeVue from 'comp/badge/index.vue'
 import carouselVue from 'comp/carousel/index.vue'
 import collapseVue from 'comp/collapse/index.vue'
+import descriptionsVue from 'comp/descriptions/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -44,7 +45,8 @@ const routes = [
     { path : '/card',component : cardVue },
     { path : '/carousel',component : carouselVue },
     { path : '/collapse',component : collapseVue },
-    { path : '/badge',component : badgeVue }
+    { path : '/badge',component : badgeVue },
+    { path : '/descriptions',component : descriptionsVue }
 ]
 
 const router= createRouter({
