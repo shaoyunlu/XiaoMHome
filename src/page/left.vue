@@ -64,6 +64,9 @@
                     <a href="#/descriptions" class="link">
                         <p class="link-text">Descriptions 描述列表</p>
                     </a>
+                    <a href="#/empty" class="link">
+                        <p class="link-text">Empty 空状态</p>
+                    </a>
                     <a href="#/image" class="link">
                         <p class="link-text">Image 图片</p>
                     </a>

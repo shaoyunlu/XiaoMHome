@@ -23,6 +23,7 @@ import badgeVue from 'comp/badge/index.vue'
 import carouselVue from 'comp/carousel/index.vue'
 import collapseVue from 'comp/collapse/index.vue'
 import descriptionsVue from 'comp/descriptions/index.vue'
+import emptyVue from 'comp/empty/index.vue'
 import imageVue from 'comp/image/index.vue'
 
 const routes = [
@@ -48,6 +49,7 @@ const routes = [
     { path : '/collapse',component : collapseVue },
     { path : '/badge',component : badgeVue },
     { path : '/descriptions',component : descriptionsVue },
+    { path : '/empty',component : emptyVue },
     { path : '/image',component : imageVue }
 ]
 
