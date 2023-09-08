@@ -58,12 +58,22 @@ export default defineComponent({
     components:{userIcon},
     setup(props ,context) {
         const li_1 = [
-            'arrowDown' ,'arrowLeft' ,'arrowRight' ,'arrowUp' , 'barChart','calendar' ,'check' ,'circleCheck',
-            'circleClose' ,'clock' ,'close' ,'dArrowLeft' ,'dArrowRight' ,'dlt' ,'document',
-            'download' ,'edit' ,'hide' ,'infoFilled' ,'loading' , 'lineChart','message' ,'minus',
-            'download' ,'edit' ,'hide' ,'infoFilled' ,'loading' ,'message' ,'minus',
-            'moreFilled' ,'plus' , 'pieChart','refresh' ,'search' ,'setting' ,'sort' ,'star',
-            'successFilled' ,'upload','uploadFilled' ,'vew' ,'warningFilled' ,'zoomIn' ,'zoomOut'
+            'arrowDown' ,'arrowLeft' ,'arrowRight' ,'arrowUp' , 
+            'barChart',
+            'calendar' ,'check' ,'circleCheck','circleClose' ,'clock' ,'close' ,
+            'dArrowLeft' ,'dArrowRight' ,'dlt' ,'document','download',
+            'edit','empty',
+            'hide',
+            'infoFilled',
+            'loading','lineChart',
+            'message' ,'minus','moreFilled' , 
+            'pic','plus' , 'pieChart',
+            'refresh' ,'refreshLeft' ,'refreshRight',
+            'search' ,'setting' ,'sort' ,'star','successFilled' ,
+            'upload','uploadFilled' ,
+            'vew' ,
+            'warningFilled' ,
+            'zoomIn' ,'zoomOut'
         ]
 
         const capitalizeFirstLetter = (str)=>{
