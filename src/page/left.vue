@@ -70,6 +70,9 @@
                     <a href="#/image" class="link">
                         <p class="link-text">Image 图片</p>
                     </a>
+                    <a href="#/pagination" class="link">
+                        <p class="link-text">Pagination 分页</p>
+                    </a>
                 </section>
             </div>
         </aside>
