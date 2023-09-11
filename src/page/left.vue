@@ -73,6 +73,9 @@
                     <a href="#/pagination" class="link">
                         <p class="link-text">Pagination 分页</p>
                     </a>
+                    <a href="#/table" class="link">
+                        <p class="link-text">Table 表格</p>
+                    </a>
                 </section>
             </div>
         </aside>

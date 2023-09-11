@@ -1,0 +1,318 @@
+<template>
+    <h1>Table 表格</h1>
+    <p>用于展示多条结构类似的数据， 可对数据进行排序、筛选、对比或其他自定义操作。</p>
+    <h2>基础表格</h2>
+    <p>基础的表格展示用法。</p>
+    <p text="sm">
+        <p>当 <code>xmv-table</code> 元素中注入 <code>data</code> 对象数组后，在 <code>xmv-table-column</code> 
+        中用 <code>prop</code> 属性来对应对象中的键名即可填入数据，用 <code>label</code> 属性来定义表格的列名。 
+        可以使用 <code>width</code> 属性来定义列宽。</p>
+    </p>
+    <xmv-code>
+        <div>
+            <xmv-table :data="tableData" style="width: 100%">
+                <xmv-table-column prop="date" label="Date" width="180" />
+                <xmv-table-column prop="name" label="Name" width="180" />
+                <xmv-table-column prop="address" label="Address" />
+            </xmv-table>
+        </div>
+    </xmv-code>
+    <h2>带斑马纹表格</h2>
+    <p>使用带斑马纹的表格，可以更容易区分出不同行的数据。</p>
+    <p text="sm">
+        <p><code>stripe</code> 可以创建带斑马纹的表格。 如果 <code>true</code>, 表格将会带有斑马纹。</p>
+    </p>
+    <xmv-code>
+        <div>
+            <xmv-table :data="tableData" style="width: 100%" stripe>
+                <xmv-table-column prop="date" label="Date" width="180" />
+                <xmv-table-column prop="name" label="Name" width="180" />
+                <xmv-table-column prop="address" label="Address" />
+            </xmv-table>
+        </div>
+    </xmv-code>
+    <h2>带边框表格</h2>
+    <p text="sm">
+        <p>默认情况下，Table 组件是不具有竖直方向的边框的， 如果需要，可以使用 <code>border</code> 属性，
+        把该属性设置为 <code>true</code> 即可启用。</p>
+    </p>
+    <xmv-code>
+        <div>
+            <xmv-table :data="tableData" style="width: 100%" stripe border>
+                <xmv-table-column prop="date" label="Date" width="180" />
+                <xmv-table-column prop="name" label="Name" width="180" />
+                <xmv-table-column prop="address" label="Address" />
+            </xmv-table>
+        </div>
+    </xmv-code>
+    <h2>带状态表格</h2>
+    <p>可将表格内容 highlight 显示，方便区分「成功、信息、警告、危险」等内容。</p>
+    <p text="sm">
+        <p>通过设置<code>data</code>属性的数组中的每条记录的<code>trStatus</code></p>
+    </p>
+    <xmv-code>
+        <div>
+            <xmv-table :data="tableData_1" style="width: 100%" border>
+                <xmv-table-column prop="date" label="Date" width="180" />
+                <xmv-table-column prop="name" label="Name" width="180" />
+                <xmv-table-column prop="address" label="Address" />
+            </xmv-table>
+        </div>
+    </xmv-code>
+    <h2>固定表头</h2>
+    <p>纵向内容过多时，可选择固定表头。</p>
+    <p text="sm"><p>只要在 <code>xmv-table</code> 元素中定义了 <code>height</code> 属性，
+        即可实现固定表头的表格，而不需要额外的代码。</p>
+    </p>
+    <xmv-code>
+        <div>
+            <xmv-table :data="tableData_2" style="width: 100%" height="250">
+                <xmv-table-column prop="date" label="Date" width="180" />
+                <xmv-table-column prop="name" label="Name" width="180" />
+                <xmv-table-column prop="address" label="Address" />
+            </xmv-table>
+        </div>
+    </xmv-code>
+    <h2>固定列</h2>
+    <p>横向内容过多时，可选择固定列。</p>
+    <p text="sm">
+        <p>固定列需要使用 <code>fixed</code> 属性，它接受 <code>Boolean</code> 值。 
+        如果为 <code>true</code>, 列将被左侧固定. 它还接受传入字符串，left 或 right，表示左边固定还是右边固定。</p>
+    </p>
+    <xmv-code>
+        <div>
+            <xmv-table :data="tableData_3" style="width: 100%">
+                <xmv-table-column prop="name1" label="name1" width="150" fixed/>
+                <xmv-table-column prop="name2" label="name2" width="150" />
+                <xmv-table-column prop="name3" label="name3" width="150"/>
+                <xmv-table-column prop="name4" label="name4" width="150"/>
+                <xmv-table-column prop="name5" label="name5" width="150"/>
+                <xmv-table-column prop="name6" label="name6" width="150"/>
+                <xmv-table-column prop="name7" label="name7" width="150"/>
+                <xmv-table-column prop="name8" label="name8" width="150" fixed="right"/>
+            </xmv-table>
+        </div>
+    </xmv-code>
+    <h2>固定列和表头</h2>
+    <p>当您有大量数据块放入表中，您可以同时固定表头和列。</p>
+    <p text="sm"><p>固定列和表头可以同时使用，只需要将上述两个属性分别设置好即可。</p></p>
+    <xmv-code>
+        <div>
+            <xmv-table :data="tableData_3" style="width: 100%" height="200">
+                <xmv-table-column prop="name1" label="name1" width="150" fixed/>
+                <xmv-table-column prop="name2" label="name2" width="150" />
+                <xmv-table-column prop="name3" label="name3" width="150"/>
+                <xmv-table-column prop="name4" label="name4" width="150"/>
+                <xmv-table-column prop="name5" label="name5" width="150"/>
+                <xmv-table-column prop="name6" label="name6" width="150"/>
+                <xmv-table-column prop="name7" label="name7" width="150"/>
+                <xmv-table-column prop="name8" label="name8" width="150" fixed="right"/>
+            </xmv-table>
+        </div>
+    </xmv-code>
+    <h2>流体高度</h2>
+    <p>当数据量动态变化时，可以为 Table 设置一个最大高度。</p>
+    <p text="sm"><p>通过设置 <code>max-height</code> 属性为 <code>xmv-table</code> 指定最大高度。 
+        此时若表格所需的高度大于最大高度，则会显示一个滚动条。</p>
+    </p>
+    <xmv-code>
+        <div>
+            <xmv-table :data="tableData_4" style="width: 100%" max-height="200">
+                <xmv-table-column prop="name1" label="name1" width="150" fixed/>
+                <xmv-table-column prop="name2" label="name2" width="150" />
+                <xmv-table-column prop="name3" label="name3" width="150"/>
+                <xmv-table-column prop="name4" label="name4" width="150"/>
+                <xmv-table-column prop="name5" label="name5" width="150"/>
+                <xmv-table-column prop="name6" label="name6" width="150"/>
+                <xmv-table-column prop="name7" label="name7" width="150"/>
+                <xmv-table-column prop="name8" label="name8" width="150" fixed="right">
+                    <template #default="data">
+                        <xmv-button link type="primary" size="small" @click="handleDelete(data)">Delete</xmv-button>
+                    </template>
+                </xmv-table-column>
+            </xmv-table>
+            <xmv-button style="width: 100%;margin-top:10px;" @click="onAddItem">Add Item</xmv-button>
+        </div>
+    </xmv-code>
+    <h2>单选</h2>
+    <p>选择单行数据时使用色块表示。</p>
+    <p text="sm"><p>Table 组件提供了单选的支持， 只需要配置 <code>highlight-current-row</code> 属性即可实现单选。 
+        之后由 <code>current-change</code> 事件来管理选中时触发的事件，
+        它会传入 <code>currentRow</code>，<code>oldCurrentRow</code>。 
+        如果需要显示索引，可以增加一列 <code>xmv-table-column</code>，
+        设置 <code>type</code> 属性为 <code>index</code> 即可显示从 1 开始的索引号。</p>
+    </p>
+    <xmv-code>
+        <div>
+            <xmv-table :data="tableData" style="width: 100%" highlight-current-row>
+                <xmv-table-column prop="name" label="name1" />
+                <xmv-table-column prop="date" label="name2"  />
+                <xmv-table-column prop="address" label="name3" />
+            </xmv-table>
+        </div>
+    </xmv-code>
+    <h2>多选</h2>
+    <p>你也可以选择多行。</p>
+    <p text="sm"><p>实现多选非常简单: 手动添加一个 <code>xmv-table-column</code>，设 <code>type</code> 属性为 <code>selection</code> 即可； 
+        除了多选，这里还使用到了 <code>show-overflow-tooltip</code>属性。 默认情况下，如果单元格内容过长，会占用多行显示。 
+        若需要单行显示可以使用 <code>show-overflow-tooltip</code> 属性，
+        它接受一个 <code>Boolean</code>， 为 <code>true</code> 时多余的内容会在 hover 时以 tooltip 的形式显示出来。</p>
+    </p>
+    <xmv-code>
+        <div>
+            <xmv-table :data="tableData_2" style="width: 100%" height="250">
+                <xmv-table-column type="checkbox" width="55" />
+                <xmv-table-column prop="name" label="name1" />
+                <xmv-table-column prop="date" label="name2"  />
+                <xmv-table-column prop="address" label="name3" />
+            </xmv-table>
+        </div>
+    </xmv-code>
+</template>
+
+<script>
+import {defineComponent ,ref} from 'vue'
+export default defineComponent({
+    name:"",
+    setup(props ,context) {
+        const tableData = [
+            {
+                date: '2016-05-03',
+                name: 'Tom',
+                address: 'No. 189, Grove St, Los Angeles',
+            },
+            {
+                date: '2016-05-02',
+                name: 'Tom',
+                address: 'No. 189, Grove St, Los Angeles',
+            },
+            {
+                date: '2016-05-04',
+                name: 'Tom',
+                address: 'No. 189, Grove St, Los Angeles',
+            },
+            {
+                date: '2016-05-01',
+                name: 'Tom',
+                address: 'No. 189, Grove St, Los Angeles',
+            },
+        ]
+        const tableData_1 = [
+            {
+                date: '2016-05-03',
+                name: 'Tom',
+                address: 'No. 189, Grove St, Los Angeles',
+                trStatus: 'success'
+            },
+            {
+                date: '2016-05-02',
+                name: 'Tom',
+                address: 'No. 189, Grove St, Los Angeles',
+                trStatus: 'warning'
+            },
+            {
+                date: '2016-05-04',
+                name: 'Tom',
+                address: 'No. 189, Grove St, Los Angeles',
+                trStatus: 'danger'
+            },
+            {
+                date: '2016-05-01',
+                name: 'Tom',
+                address: 'No. 189, Grove St, Los Angeles',
+                trStatus: 'error'
+            },
+        ]
+        const tableData_2 = [
+            {
+                date: '2016-05-03',
+                name: 'Tom',
+                address: 'No. 189, Grove St, Los Angeles',
+            },
+            {
+                date: '2016-05-02',
+                name: 'Tom',
+                address: 'No. 189, Grove St, Los Angeles',
+            },
+            {
+                date: '2016-05-04',
+                name: 'Tom',
+                address: 'No. 189, Grove St, Los Angeles',
+            },
+            {
+                date: '2016-05-01',
+                name: 'Tom',
+                address: 'No. 189, Grove St, Los Angeles',
+            },
+            {
+                date: '2016-05-03',
+                name: 'Tom',
+                address: 'No. 189, Grove St, Los Angeles',
+            },
+            {
+                date: '2016-05-02',
+                name: 'Tom',
+                address: 'No. 189, Grove St, Los Angeles',
+            },
+            {
+                date: '2016-05-04',
+                name: 'Tom',
+                address: 'No. 189, Grove St, Los Angeles',
+            },
+            {
+                date: '2016-05-01',
+                name: 'Tom',
+                address: 'No. 189, Grove St, Los Angeles',
+            },
+            {
+                date: '2016-05-03',
+                name: 'Tom',
+                address: 'No. 189, Grove St, Los Angeles',
+            },
+            {
+                date: '2016-05-02',
+                name: 'Tom',
+                address: 'No. 189, Grove St, Los Angeles',
+            },
+            {
+                date: '2016-05-04',
+                name: 'Tom',
+                address: 'No. 189, Grove St, Los Angeles',
+            },
+            {
+                date: '2016-05-01',
+                name: 'Tom',
+                address: 'No. 189, Grove St, Los Angeles',
+            },
+        ]
+        const tableData_3 = [
+            {name1 : 'name1',name2 : 'name2',name3 : 'name3',name4 : 'name4',
+            name5 : 'name5',name6 : 'name6',name7 : 'name7',name8 : 'name8'},
+            {name1 : 'name1',name2 : 'name2',name3 : 'name3',name4 : 'name4',
+            name5 : 'name5',name6 : 'name6',name7 : 'name7',name8 : 'name8'},
+            {name1 : 'name1',name2 : 'name2',name3 : 'name3',name4 : 'name4',
+            name5 : 'name5',name6 : 'name6',name7 : 'name7',name8 : 'name8'},
+            {name1 : 'name1',name2 : 'name2',name3 : 'name3',name4 : 'name4',
+            name5 : 'name5',name6 : 'name6',name7 : 'name7',name8 : 'name8'},
+            {name1 : 'name1',name2 : 'name2',name3 : 'name3',name4 : 'name4',
+            name5 : 'name5',name6 : 'name6',name7 : 'name7',name8 : 'name8'}
+        ]
+        const tableData_4 = ref([
+            {name1 : 'name1',name2 : 'name2',name3 : 'name3',name4 : 'name4',
+            name5 : 'name5',name6 : 'name6',name7 : 'name7',name8 : 'name8'}
+        ])
+        const onAddItem = ()=>{
+            tableData_4.value.push({name1 : new Date().getTime(),name2 : 'name2',name3 : 'name3',name4 : 'name4',
+                name5 : 'name5',name6 : 'name6',name7 : 'name7',name8 : 'name8'})
+        }
+        const handleDelete = ({data})=>{
+            //console.log(data)
+            tableData_4.value.splice(data.xmvIndex, 1)
+        }
+        return {tableData,tableData_1,tableData_2,tableData_3,tableData_4,
+                onAddItem,handleDelete}
+    }
+})
+</script>
+
+<style lang="" scoped></style>

@@ -26,6 +26,7 @@ import descriptionsVue from 'comp/descriptions/index.vue'
 import emptyVue from 'comp/empty/index.vue'
 import imageVue from 'comp/image/index.vue'
 import paginationVue from 'comp/pagination/index.vue'
+import tableVue from 'comp/table/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -52,7 +53,8 @@ const routes = [
     { path : '/descriptions',component : descriptionsVue },
     { path : '/empty',component : emptyVue },
     { path : '/image',component : imageVue },
-    { path : '/pagination',component : paginationVue }
+    { path : '/pagination',component : paginationVue },
+    { path : '/table',component : tableVue }
 ]
 
 const router= createRouter({
