@@ -126,8 +126,8 @@
                 <xmv-table-column prop="name6" label="name6" width="150"/>
                 <xmv-table-column prop="name7" label="name7" width="150"/>
                 <xmv-table-column prop="name8" label="name8" width="150" fixed="right">
-                    <template #default="data">
-                        <xmv-button link type="primary" size="small" @click="handleDelete(data)">Delete</xmv-button>
+                    <template #default="{props}">
+                        <xmv-button link type="primary" size="small" @click="handleDelete(props.data)">Delete</xmv-button>
                     </template>
                 </xmv-table-column>
             </xmv-table>
@@ -145,9 +145,10 @@
     <xmv-code>
         <div>
             <xmv-table :data="tableData" style="width: 100%" highlight-current-row>
-                <xmv-table-column prop="name" label="name1" />
-                <xmv-table-column prop="date" label="name2"  />
-                <xmv-table-column prop="address" label="name3" />
+                <xmv-table-column type="index" width="56"></xmv-table-column>
+                <xmv-table-column prop="name" label="name" />
+                <xmv-table-column prop="date" label="date"  />
+                <xmv-table-column prop="address" label="address" />
             </xmv-table>
         </div>
     </xmv-code>
@@ -162,9 +163,81 @@
         <div>
             <xmv-table :data="tableData_2" style="width: 100%" height="250">
                 <xmv-table-column type="checkbox" width="55" />
-                <xmv-table-column prop="name" label="name1" />
-                <xmv-table-column prop="date" label="name2"  />
-                <xmv-table-column prop="address" label="name3" />
+                <xmv-table-column prop="name" label="name" />
+                <xmv-table-column prop="date" label="date"  />
+                <xmv-table-column prop="address" label="address" show-overflow-tooltip/>
+            </xmv-table>
+        </div>
+    </xmv-code>
+    <h2>排序</h2>
+    <p>对表格进行排序，可快速查找或对比数据。</p>
+    <p text="sm"><p>在列中设置 sortable 属性即可实现以该列为基准的排序</p></p>
+    <xmv-code>
+        <div>
+            <xmv-table :data="tableData_2" height="250">
+                <xmv-table-column prop="name" label="name" sortable/>
+                <xmv-table-column prop="date" label="date"  sortable/>
+                <xmv-table-column prop="address" label="address"/>
+            </xmv-table>
+        </div>
+    </xmv-code>
+    <h2>自定义列模板</h2>
+    <p>自定义列的显示内容，可组合其他组件使用。</p>
+    <p text="sm">
+        <p>通过 <code>slot</code> 可以获取到当前行的 data 数据</p>
+    </p>
+    <xmv-code>
+        <div>
+            <xmv-table :data="tableData_2" height="250">
+                <xmv-table-column prop="name" label="name" sortable>
+                    <template #default="{props}">
+                        <xmv-tag>{{ props.data.name }}</xmv-tag>
+                    </template>
+                </xmv-table-column>
+                <xmv-table-column prop="date" label="date"  sortable/>
+                <xmv-table-column prop="address" label="address"/>
+            </xmv-table>
+        </div>
+    </xmv-code>
+    <h2>展开行</h2>
+    <p>当行内容过多并且不想显示横向滚动条时，可以使用 Table 展开行功能。</p>
+    <p text="sm">
+        <p>通过设置 type="expand" 和 slot 可以开启展开行功能， 
+            xmv-table-column 的模板会被渲染成为展开行的内容，展开行可访问的属性与使用自定义列模板时的 slot 相同。</p>
+    </p>
+    <xmv-code>
+        <div>
+            <xmv-table :data="tableData_2" height="350">
+                <xmv-table-column type="expand" width="55">
+                    <template #default="{props}">
+                        <xmv-tag>{{ props.data.name }}</xmv-tag>
+                    </template>
+                </xmv-table-column>
+                <xmv-table-column prop="date" label="date"/>
+                <xmv-table-column prop="address" label="address"/>
+            </xmv-table>
+        </div>
+    </xmv-code>
+    <h2>树形数据与懒加载</h2>
+    <p text="sm">
+        <p>支持树类型的数据的显示。当 row 中包含 <code>children</code> 字段时，被视为树形数据。此外，子行数据可以异步加载。
+            设置 Table 的<code>lazy</code> 属性为 true 与加载函数 <code>load</code>。通过指定 row 中的<code>hasChildren</code>
+            字段来指定哪些行是包含子节点。
+        </p>
+    </p>
+    <xmv-code>
+        <div>
+            <xmv-table :data="tableData_6">
+                <xmv-table-column prop="name" label="name"></xmv-table-column>
+                <xmv-table-column prop="date" label="date"/>
+                <xmv-table-column prop="address" label="address"/>
+            </xmv-table>
+        </div>
+        <div style="margin-top:20px">
+            <xmv-table :data="tableData_6" lazy :load="load">
+                <xmv-table-column prop="name" label="name"></xmv-table-column>
+                <xmv-table-column prop="date" label="date"/>
+                <xmv-table-column prop="address" label="address"/>
             </xmv-table>
         </div>
     </xmv-code>
@@ -226,8 +299,8 @@ export default defineComponent({
         const tableData_2 = [
             {
                 date: '2016-05-03',
-                name: 'Tom',
-                address: 'No. 189, Grove St, Los Angeles',
+                name: 'Alex',
+                address: 'No. 189, Grove St, Los Angeles No. 189, Grove St, Los Angeles',
             },
             {
                 date: '2016-05-02',
@@ -236,12 +309,12 @@ export default defineComponent({
             },
             {
                 date: '2016-05-04',
-                name: 'Tom',
+                name: 'Kevin',
                 address: 'No. 189, Grove St, Los Angeles',
             },
             {
                 date: '2016-05-01',
-                name: 'Tom',
+                name: 'Echo',
                 address: 'No. 189, Grove St, Los Angeles',
             },
             {
@@ -268,22 +341,7 @@ export default defineComponent({
                 date: '2016-05-03',
                 name: 'Tom',
                 address: 'No. 189, Grove St, Los Angeles',
-            },
-            {
-                date: '2016-05-02',
-                name: 'Tom',
-                address: 'No. 189, Grove St, Los Angeles',
-            },
-            {
-                date: '2016-05-04',
-                name: 'Tom',
-                address: 'No. 189, Grove St, Los Angeles',
-            },
-            {
-                date: '2016-05-01',
-                name: 'Tom',
-                address: 'No. 189, Grove St, Los Angeles',
-            },
+            }
         ]
         const tableData_3 = [
             {name1 : 'name1',name2 : 'name2',name3 : 'name3',name4 : 'name4',
@@ -301,16 +359,93 @@ export default defineComponent({
             {name1 : 'name1',name2 : 'name2',name3 : 'name3',name4 : 'name4',
             name5 : 'name5',name6 : 'name6',name7 : 'name7',name8 : 'name8'}
         ])
+        const tableData_5 = ref([
+            {
+                date: '2016-05-03',
+                name: 'Alex',
+                address: 'No. 189, Grove St',
+                hasChildren : true,
+                children : [
+                    {
+                        date: '2016-05-03111',
+                        name: 'Alex111',
+                        address: 'No. 189, Grove St111'
+                    }
+                ]
+            },
+        ])
+        const tableData_6 = ref([
+            {
+                date: '2016-05-03',
+                name: 'Cat',
+                address: 'No. 189, Grove StNo. 189'
+            },
+            {
+                date: '2016-05-03',
+                name: 'Alex',
+                address: 'No. 189, Grove St'
+            },
+            
+            {
+                date: '2016-05-03',
+                name: 'Bob',
+                address: 'No. 189, Grove St',
+                hasChildren : true,
+                children : [
+                    {
+                        date: '2016-05-03111',
+                        name: 'Bob1',
+                        address: 'No. 189, Grove St111',
+                    },
+                    {
+                        date: '2016-05-03111',
+                        name: 'Bob2',
+                        address: 'No. 189, Grove St111',
+                    },
+                    {
+                        date: '2016-05-03111',
+                        name: 'Bob3',
+                        address: 'No. 189, Grove St111'
+                    }
+                ]
+            },
+            {
+                date: '2016-05-03',
+                name: 'Dong',
+                address: 'No. 189, Grove St'
+            }
+        ])
         const onAddItem = ()=>{
             tableData_4.value.push({name1 : new Date().getTime(),name2 : 'name2',name3 : 'name3',name4 : 'name4',
                 name5 : 'name5',name6 : 'name6',name7 : 'name7',name8 : 'name8'})
         }
-        const handleDelete = ({data})=>{
+        const handleDelete = (data)=>{
             //console.log(data)
-            tableData_4.value.splice(data.xmvIndex, 1)
+            console.log(data.xmvSortIndex)
+            tableData_4.value.splice(data.xmvSortIndex, 1)
         }
-        return {tableData,tableData_1,tableData_2,tableData_3,tableData_4,
-                onAddItem,handleDelete}
+        const load = ()=>{
+            return new Promise((resolve ,reject)=>{
+                setTimeout(() => {
+                    resolve(
+                        [
+                            {
+                                date: '2016-05-03111',
+                                name: 'Bob1',
+                                address: 'No. 189, Grove St111',
+                            },
+                            {
+                                date: '2016-05-03111',
+                                name: 'Bob2',
+                                address: 'No. 189, Grove St111',
+                            }
+                        ]
+                    )
+                }, 3000);
+            })
+        }
+        return {tableData,tableData_1,tableData_2,tableData_3,tableData_4,tableData_5,tableData_6,
+                load,onAddItem,handleDelete}
     }
 })
 </script>
