@@ -72,7 +72,7 @@
     <p text="sm"><p>只需要把 <code>xmv-checkbox</code> 元素替换为 <code>xmv-checkbox-button</code> 元素即可。 
         此外，还提供了<code>size</code>属性。</p>
     </p>
-    <xmv-code>
+    <xmv-code :code="code_6">
         <div>
             <xmv-checkbox-group v-model="group3_1">
                 <xmv-checkbox-button size="large" v-for="tmp in position" :label="tmp">{{ tmp }}</xmv-checkbox-button>
@@ -218,6 +218,35 @@ export default defineComponent({
                                 <xmv-checkbox label="opt5">opt5</xmv-checkbox>
                             </xmv-checkbox-group>
                         `
+        let code_6 =
+                        `
+                            // JS
+                            const group3_1 = ref([])
+                            const group3_2 = ref([])
+                            const group3_3 = ref([])
+                            const group3_4 = ref([])
+                            // Template
+                            <div>
+                                <xmv-checkbox-group v-model="group3_1">
+                                    <xmv-checkbox-button size="large" v-for="tmp in position" :label="tmp">{{ tmp }}</xmv-checkbox-button>
+                                </xmv-checkbox-group>
+                            </div>
+                            <div style="margin-top: 15px;">
+                                <xmv-checkbox-group v-model="group3_2">
+                                    <xmv-checkbox-button v-for="tmp in position" :label="tmp">{{ tmp }}</xmv-checkbox-button>
+                                </xmv-checkbox-group>
+                            </div>
+                            <div style="margin-top: 15px;">
+                                <xmv-checkbox-group v-model="group3_3">
+                                    <xmv-checkbox-button size="small" v-for="tmp in position" :label="tmp">{{ tmp }}</xmv-checkbox-button>
+                                </xmv-checkbox-group>
+                            </div>
+                            <div style="margin-top: 15px;">
+                                <xmv-checkbox-group v-model="group3_4">
+                                    <xmv-checkbox-button disabled size="small" v-for="tmp in position" :label="tmp">{{ tmp }}</xmv-checkbox-button>
+                                </xmv-checkbox-group>
+                            </div>
+                        `
         onMounted(()=>{
             setTimeout(()=>{
                 //group3.value = ['top']
@@ -225,7 +254,7 @@ export default defineComponent({
             
             
         })
-        return {checkbox1 ,code_1 ,code_2 ,code_3 ,code_4 ,code_5 ,group1 ,group2 ,group3_1 ,
+        return {checkbox1 ,code_1 ,code_2 ,code_3 ,code_4 ,code_5 ,code_6 ,group1 ,group2 ,group3_1 ,
                 checkall,position,indeterminateStatus,groupMax,group3_2 ,group3_3 ,group3_4 ,
                 handleCheckAll ,handleSigleCheck ,handleCheckGroup1}
     }
