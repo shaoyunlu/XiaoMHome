@@ -78,19 +78,23 @@ export default defineComponent({
                         `
                             <div class="demo-pagination-block">
                                 <div class="demonstration">总页数</div>
-                                <xmv-pagination :total="999" :page-size="10" layout="total,prev,pager,next"></xmv-pagination>
+                                <xmv-pagination :total="999" :page-size="10" 
+                                    layout="total,prev,pager,next"></xmv-pagination>
                             </div>
                             <div class="demo-pagination-block">
                                 <div class="demonstration">每页条数</div>
-                                <xmv-pagination :total="999" v-model:page-size="pageSizeMode" layout="size,prev,pager,next"></xmv-pagination>
+                                <xmv-pagination :total="999" v-model:page-size="pageSizeMode" 
+                                    layout="size,prev,pager,next"></xmv-pagination>
                             </div>
                             <div class="demo-pagination-block">
                                 <div class="demonstration">跳转</div>
-                                <xmv-pagination :total="999" :page-size="10" layout="goto,prev,pager,next"></xmv-pagination>
+                                <xmv-pagination :total="999" :page-size="10" 
+                                    layout="goto,prev,pager,next"></xmv-pagination>
                             </div>
                             <div class="demo-pagination-block">
                                 <div class="demonstration">综合</div>
-                                <xmv-pagination :total="999" v-model:page-size="pageSizeMode_1" layout="total,prev,pager,next,size,goto"></xmv-pagination>
+                                <xmv-pagination :total="999" v-model:page-size="pageSizeMode_1" 
+                                    layout="total,prev,pager,next,size,goto"></xmv-pagination>
                             </div>
                         `
         return {pageSizeMode,pageSizeMode_1,code_1,code_2,code_3,code_4,code_5}
