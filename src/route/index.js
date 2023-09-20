@@ -28,6 +28,7 @@ import imageVue from 'comp/image/index.vue'
 import paginationVue from 'comp/pagination/index.vue'
 import tableVue from 'comp/table/index.vue'
 import tagVue from 'comp/tag/index.vue'
+import treeVue from 'comp/tree/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -56,7 +57,8 @@ const routes = [
     { path : '/image',component : imageVue },
     { path : '/pagination',component : paginationVue },
     { path : '/table',component : tableVue },
-    { path : '/tag',component : tagVue }
+    { path : '/tag',component : tagVue },
+    { path : '/tree',component : treeVue }
 ]
 
 const router= createRouter({

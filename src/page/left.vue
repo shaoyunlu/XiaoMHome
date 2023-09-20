@@ -79,6 +79,9 @@
                     <a href="#/tag" class="link">
                         <p class="link-text">Tag 标签</p>
                     </a>
+                    <a href="#/tree" class="link">
+                        <p class="link-text">Tree 树形组件</p>
+                    </a>
                 </section>
             </div>
         </aside>
