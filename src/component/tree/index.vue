@@ -60,8 +60,8 @@
         <xmv-tree ref="treeRef" :data="data_5"/>
     </xmv-code>
     <h2>可拖拽节点</h2>
-    <p>通过 <code>draggable</code> 属性可让节点变为可拖拽。</p>
-    <xmv-code>
+    <p>通过 <code>draggable</code> 属性可让节点变为可拖拽。数据需要有 <code>value</code> 属性</p>
+    <xmv-code :code="code_7">
         <xmv-tree draggable :data="data_6"/>
     </xmv-code>
 </template>
@@ -634,9 +634,85 @@ export default defineComponent({
                                 :data="data_5"
                             />
                         `
+        const code_7 =
+                        `
+                            // JS
+                            const data_6 = ref([
+                                {
+                                    label: '节点 1',
+                                    value : '1',
+                                    children: [
+                                        {
+                                            label: '节点 1-1',
+                                            value: '1-1',
+                                            children: [
+                                                {
+                                                    label: '节点 1-1-1',
+                                                    value: '1-1-1'
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    label: '节点 2',
+                                    value : '2',
+                                    children: [
+                                    {
+                                        label: '节点 2-1',
+                                        value : '2-1',
+                                        children: [
+                                            {
+                                                label: '节点 2-1-1',
+                                                value: '2-1-1'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        label: '节点 2-2',
+                                        value: '2-2',
+                                        children: [
+                                            {
+                                                value : '2-2-1',
+                                                label: '节点 2-2-1',
+                                            }
+                                        ]
+                                    }
+                                    ]
+                                },
+                                {
+                                    label: '节点 3',
+                                    value : '3',
+                                    children: [
+                                        {
+                                            label: '节点 3-1',
+                                            value : '3-1',
+                                            children: [
+                                                {
+                                                    value : '3-1-1',
+                                                    label: '节点 3-1-1'
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            label: '节点 3-2',
+                                            value : '3-2',
+                                            children: [
+                                                {
+                                                    value : '3-2-1',
+                                                    label: '节点 3-2-1',
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ])
+                            // Template
+                            <xmv-tree draggable :data="data_6"/>
+                        `
         return {data_1,data_2,data_2_1,data_3,data_4,data_5,data_6,treeRef,filterText,
                 load,append,remove,filterNode,
-                code_1,code_2,code_3,code_4,code_5,code_6}
+                code_1,code_2,code_3,code_4,code_5,code_6,code_7}
     }
 })
 </script>
