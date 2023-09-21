@@ -30,6 +30,7 @@ import tableVue from 'comp/table/index.vue'
 import tagVue from 'comp/tag/index.vue'
 import treeVue from 'comp/tree/index.vue'
 import treeSelectVue from 'comp/treeSelect/index.vue'
+import affixVue from 'comp/affix/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -60,7 +61,8 @@ const routes = [
     { path : '/table',component : tableVue },
     { path : '/tag',component : tagVue },
     { path : '/tree',component : treeVue },
-    { path : '/treeSelect',component : treeSelectVue }
+    { path : '/treeSelect',component : treeSelectVue },
+    { path : '/affix',component : affixVue }
 ]
 
 const router= createRouter({

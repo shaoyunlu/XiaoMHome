@@ -86,6 +86,12 @@
                         <p class="link-text">TreeSelect 树形组件</p>
                     </a>
                 </section>
+                <section class="sidebar-group">
+                    <p class="sidebar-group__title">Navigation 导航</p>
+                    <a href="#/affix" class="link">
+                        <p class="link-text">Affix 固钉</p>
+                    </a>
+                </section>
             </div>
         </aside>
     </xmv-scrollbar>
