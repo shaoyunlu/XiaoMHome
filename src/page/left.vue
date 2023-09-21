@@ -82,6 +82,9 @@
                     <a href="#/tree" class="link">
                         <p class="link-text">Tree 树形组件</p>
                     </a>
+                    <a href="#/treeSelect" class="link">
+                        <p class="link-text">TreeSelect 树形组件</p>
+                    </a>
                 </section>
             </div>
         </aside>

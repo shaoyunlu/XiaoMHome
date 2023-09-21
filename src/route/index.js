@@ -29,6 +29,7 @@ import paginationVue from 'comp/pagination/index.vue'
 import tableVue from 'comp/table/index.vue'
 import tagVue from 'comp/tag/index.vue'
 import treeVue from 'comp/tree/index.vue'
+import treeSelectVue from 'comp/treeSelect/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -58,7 +59,8 @@ const routes = [
     { path : '/pagination',component : paginationVue },
     { path : '/table',component : tableVue },
     { path : '/tag',component : tagVue },
-    { path : '/tree',component : treeVue }
+    { path : '/tree',component : treeVue },
+    { path : '/treeSelect',component : treeSelectVue }
 ]
 
 const router= createRouter({
