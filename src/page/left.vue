@@ -91,6 +91,9 @@
                     <a href="#/affix" class="link">
                         <p class="link-text">Affix 固钉</p>
                     </a>
+                    <a href="#/backtop" class="link">
+                        <p class="link-text">Backtop 回到顶部</p>
+                    </a>
                 </section>
             </div>
         </aside>

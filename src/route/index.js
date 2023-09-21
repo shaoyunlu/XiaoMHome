@@ -31,6 +31,7 @@ import tagVue from 'comp/tag/index.vue'
 import treeVue from 'comp/tree/index.vue'
 import treeSelectVue from 'comp/treeSelect/index.vue'
 import affixVue from 'comp/affix/index.vue'
+import backtopVue from 'comp/backtop/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -62,7 +63,8 @@ const routes = [
     { path : '/tag',component : tagVue },
     { path : '/tree',component : treeVue },
     { path : '/treeSelect',component : treeSelectVue },
-    { path : '/affix',component : affixVue }
+    { path : '/affix',component : affixVue },
+    { path : '/backtop',component : backtopVue }
 ]
 
 const router= createRouter({
