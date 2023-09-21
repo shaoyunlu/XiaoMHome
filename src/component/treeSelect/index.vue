@@ -14,7 +14,10 @@
     <h2>多选</h2>
     <p>通过点击或复选框选择多个选项。</p>
     <xmv-code>
+        <p>default</p>
         <xmv-tree-select v-model="value_3" :data="data_3" multiple/>
+        <p>collapseTags</p>
+        <xmv-tree-select v-model="value_3_2" :data="data_3_2" multiple collapse-tags/>
     </xmv-code>
     <h2>禁用选项</h2>
     <p>使用 disabled 字段禁用选项。</p>
@@ -46,6 +49,7 @@ export default defineComponent({
         const value_1 = ref()
         const value_2 = ref()
         const value_3 = ref([])
+        const value_3_2 = ref([])
         const value_4 = ref()
         const value_5 = ref()
         const value_6 = ref()
@@ -190,6 +194,76 @@ export default defineComponent({
                 },
         ]
         const data_3 = [
+                {
+                    value: '1',
+                    label: 'Level one 1',
+                    children: [
+                    {
+                        value: '1-1',
+                        label: 'Level two 1-1',
+                        children: [
+                        {
+                            value: '1-1-1',
+                            label: 'Level three 1-1-1',
+                        },
+                        ],
+                    },
+                    ],
+                },
+                {
+                    value: '2',
+                    label: 'Level one 2',
+                    children: [
+                    {
+                        value: '2-1',
+                        label: 'Level two 2-1',
+                        children: [
+                        {
+                            value: '2-1-1',
+                            label: 'Level three 2-1-1',
+                        },
+                        ],
+                    },
+                    {
+                        value: '2-2',
+                        label: 'Level two 2-2',
+                        children: [
+                        {
+                            value: '2-2-1',
+                            label: 'Level three 2-2-1',
+                        },
+                        ],
+                    },
+                    ],
+                },
+                {
+                    value: '3',
+                    label: 'Level one 3',
+                    children: [
+                    {
+                        value: '3-1',
+                        label: 'Level two 3-1',
+                        children: [
+                        {
+                            value: '3-1-1',
+                            label: 'Level three 3-1-1',
+                        },
+                        ],
+                    },
+                    {
+                        value: '3-2',
+                        label: 'Level two 3-2',
+                        children: [
+                        {
+                            value: '3-2-1',
+                            label: 'Level three 3-2-1',
+                        },
+                        ],
+                    },
+                    ],
+                },
+        ]
+        const data_3_2 = [
                 {
                     value: '1',
                     label: 'Level one 1',
@@ -482,8 +556,8 @@ export default defineComponent({
                 }, 3000);
             })
         }
-        return {value_1,value_2,value_3,value_4,value_5,value_6,
-                data_1,data_2,data_3,data_4,data_5,data_6,load}
+        return {value_1,value_2,value_3,value_3_2,value_4,value_5,value_6,
+                data_1,data_2,data_3,data_3_2,data_4,data_5,data_6,load}
     }
 })
 </script>
