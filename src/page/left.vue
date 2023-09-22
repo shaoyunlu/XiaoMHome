@@ -97,6 +97,9 @@
                     <a href="#/breadcrumb" class="link">
                         <p class="link-text">Breadcrumb 面包屑</p>
                     </a>
+                    <a href="#/dropdown" class="link">
+                        <p class="link-text">Dropdown 下拉菜单</p>
+                    </a>
                 </section>
             </div>
         </aside>

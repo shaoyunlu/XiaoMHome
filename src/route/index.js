@@ -33,6 +33,7 @@ import treeSelectVue from 'comp/treeSelect/index.vue'
 import affixVue from 'comp/affix/index.vue'
 import backtopVue from 'comp/backtop/index.vue'
 import breadcrumbVue from 'comp/breadcrumb/index.vue'
+import dropdownVue from 'comp/dropdown/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -66,7 +67,8 @@ const routes = [
     { path : '/treeSelect',component : treeSelectVue },
     { path : '/affix',component : affixVue },
     { path : '/backtop',component : backtopVue },
-    { path : '/breadcrumb',component : breadcrumbVue }
+    { path : '/breadcrumb',component : breadcrumbVue },
+    { path : '/dropdown',component : dropdownVue }
 ]
 
 const router= createRouter({
