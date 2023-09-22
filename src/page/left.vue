@@ -94,6 +94,9 @@
                     <a href="#/backtop" class="link">
                         <p class="link-text">Backtop 回到顶部</p>
                     </a>
+                    <a href="#/breadcrumb" class="link">
+                        <p class="link-text">Breadcrumb 面包屑</p>
+                    </a>
                 </section>
             </div>
         </aside>
