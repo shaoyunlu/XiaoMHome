@@ -34,6 +34,7 @@ import affixVue from 'comp/affix/index.vue'
 import backtopVue from 'comp/backtop/index.vue'
 import breadcrumbVue from 'comp/breadcrumb/index.vue'
 import dropdownVue from 'comp/dropdown/index.vue'
+import menuVue from 'comp/menu/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -68,7 +69,8 @@ const routes = [
     { path : '/affix',component : affixVue },
     { path : '/backtop',component : backtopVue },
     { path : '/breadcrumb',component : breadcrumbVue },
-    { path : '/dropdown',component : dropdownVue }
+    { path : '/dropdown',component : dropdownVue },
+    { path : '/menu',component : menuVue }
 ]
 
 const router= createRouter({

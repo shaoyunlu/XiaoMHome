@@ -100,6 +100,9 @@
                     <a href="#/dropdown" class="link">
                         <p class="link-text">Dropdown 下拉菜单</p>
                     </a>
+                    <a href="#/menu" class="link">
+                        <p class="link-text">Menu 菜单</p>
+                    </a>
                 </section>
             </div>
         </aside>
