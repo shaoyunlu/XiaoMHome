@@ -35,6 +35,7 @@ import backtopVue from 'comp/backtop/index.vue'
 import breadcrumbVue from 'comp/breadcrumb/index.vue'
 import dropdownVue from 'comp/dropdown/index.vue'
 import menuVue from 'comp/menu/index.vue'
+import pageHeaderVue from 'comp/pageHeader/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -70,7 +71,8 @@ const routes = [
     { path : '/backtop',component : backtopVue },
     { path : '/breadcrumb',component : breadcrumbVue },
     { path : '/dropdown',component : dropdownVue },
-    { path : '/menu',component : menuVue }
+    { path : '/menu',component : menuVue },
+    { path : '/pageHeader',component : pageHeaderVue }
 ]
 
 const router= createRouter({

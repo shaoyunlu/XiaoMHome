@@ -103,6 +103,9 @@
                     <a href="#/menu" class="link">
                         <p class="link-text">Menu 菜单</p>
                     </a>
+                    <a href="#/pageHeader" class="link">
+                        <p class="link-text">Page Header 页头</p>
+                    </a>
                 </section>
             </div>
         </aside>
