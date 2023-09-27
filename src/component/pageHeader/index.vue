@@ -136,7 +136,10 @@ export default defineComponent({
                                 </div>
                             </xmv-page-header>
                         `
-        return {code_1,code_2,code_3,code_4,code_5}
+        const goBack = ()=>{
+
+        }
+        return {code_1,code_2,code_3,code_4,code_5,goBack}
     }
 })
 </script>

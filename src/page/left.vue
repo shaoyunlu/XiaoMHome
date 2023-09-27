@@ -106,6 +106,9 @@
                     <a href="#/pageHeader" class="link">
                         <p class="link-text">Page Header 页头</p>
                     </a>
+                    <a href="#/tabs" class="link">
+                        <p class="link-text">Tabs 标签页</p>
+                    </a>
                 </section>
             </div>
         </aside>
