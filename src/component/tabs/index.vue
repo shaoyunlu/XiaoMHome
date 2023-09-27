@@ -77,6 +77,14 @@
             <xmv-tab-panel label="Task" name="fourth">Task</xmv-tab-panel>
         </xmv-tabs>
     </xmv-code>
+    <h2>动态增减标签页</h2>
+    <xmv-code>
+        <xmv-tabs v-model="tabsModel_5" type="card" editable @remove="handleRemove" @add="handleAdd">
+            <xmv-tab-panel :label="tmp.label" :name="tmp.name" v-for="tmp in list">
+                {{ tmp.content }}
+            </xmv-tab-panel>
+        </xmv-tabs>
+    </xmv-code>
 </template>
 
 <script>
@@ -92,6 +100,33 @@ export default defineComponent({
         const tabsModel_5 = ref('first')
         const tabPosition = ref('left')
 
+        let i = 0
+
+        const handleClick = ()=>{
+            list.value.push({
+                name : 'ADD' + i ,label : 'Task' + i ,content: 'Tab ADD content' + i
+            })
+            i++
+        }
+
+        const handleAdd = ()=>{
+            list.value.push({
+                name : 'ADD' + i ,label : 'Task' + i ,content: 'Tab ADD content' + i
+            })
+            i++
+        }
+
+        const handleRemove = (name)=>{
+            console.log(name)
+        }
+
+        const list = ref([
+            {name : 'first' ,label : 'User' ,content: 'Tab 1 content'},
+            {name : 'second' ,label : 'Config' ,content: 'Tab 2 content'},
+            {name : 'third' ,label : 'Role' ,content: 'Tab 3 content'},
+            {name : 'fourth' ,label : 'Task' ,content: 'Tab 4 content'}
+        ])
+
         const code_1 =
                         `
                             // JS
@@ -105,8 +140,8 @@ export default defineComponent({
                             </xmv-tabs>
                         `
 
-        return {tabsModel_1,tabsModel_2,tabsModel_3,tabsModel_4,tabsModel_5,
-                tabPosition,
+        return {tabsModel_1,tabsModel_2,tabsModel_3,tabsModel_4,tabsModel_5,list,
+                tabPosition,handleAdd,handleRemove,
                 code_1}
     }
 })
