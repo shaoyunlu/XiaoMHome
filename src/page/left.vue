@@ -110,6 +110,12 @@
                         <p class="link-text">Tabs 标签页</p>
                     </a>
                 </section>
+                <section class="sidebar-group">
+                    <p class="sidebar-group__title">Feedback 反馈组件</p>
+                    <a href="#/alert" class="link">
+                        <p class="link-text">Alert 提示</p>
+                    </a>
+                </section>
             </div>
         </aside>
     </xmv-scrollbar>

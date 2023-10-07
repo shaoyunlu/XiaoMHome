@@ -19,7 +19,7 @@
     <p text="sm"><p>只需要设置 <code>type</code> 属性为 <code>card</code> 
             就可以使选项卡改变为标签风格。</p>
     </p>
-    <xmv-code>
+    <xmv-code :code="code_2">
         <xmv-tabs v-model="tabsModel_2" type="card">
             <xmv-tab-panel label="User" name="first">User</xmv-tab-panel>
             <xmv-tab-panel label="Config" name="second">Config</xmv-tab-panel>
@@ -30,7 +30,7 @@
     <h2>带有边框的卡片风格</h2>
     <p>你还可以设置标签页为带有边框的卡片</p>
     <p text="sm"><p>将 <code>type</code> 设置为 <code>border-card</code>。</p></p>
-    <xmv-code>
+    <xmv-code :code="code_3">
         <xmv-tabs v-model="tabsModel_3" type="border-card">
             <xmv-tab-panel label="User" name="first">User</xmv-tab-panel>
             <xmv-tab-panel label="Config" name="second">Config</xmv-tab-panel>
@@ -41,7 +41,7 @@
     <h2>标签位置的设置</h2>
     <p>可以通过 <code>tab-position</code> 设置标签的位置</p>
     <p text="sm"><p>标签一共有三个方向的设置 <code>tabPosition="left|right|top"</code></p></p>
-    <xmv-code>
+    <xmv-code :code="code_4">
         <p>左方</p>
         <xmv-divider></xmv-divider>
         <xmv-tabs v-model="tabsModel_4" tab-position="left">
@@ -61,7 +61,7 @@
     </xmv-code>
     <h2>自定义标签页的内容</h2>
     <p>可以通过具名插槽来实现自定义标签页的内容</p>
-    <xmv-code>
+    <xmv-code :code="code_5">
         <xmv-tabs v-model="tabsModel_5">
             <xmv-tab-panel label="User" name="first">
                 <template #label>
@@ -78,7 +78,7 @@
         </xmv-tabs>
     </xmv-code>
     <h2>动态增减标签页</h2>
-    <xmv-code>
+    <xmv-code :code="code_6">
         <xmv-tabs v-model="tabsModel_5" type="card" editable @remove="handleRemove" @add="handleAdd">
             <xmv-tab-panel :label="tmp.label" :name="tmp.name" v-for="tmp in list">
                 {{ tmp.content }}
@@ -98,7 +98,6 @@ export default defineComponent({
         const tabsModel_3 = ref('third')
         const tabsModel_4 = ref('first')
         const tabsModel_5 = ref('first')
-        const tabPosition = ref('left')
 
         let i = 0
 
@@ -139,10 +138,97 @@ export default defineComponent({
                                 <xmv-tab-panel label="Task" name="fourth">Task</xmv-tab-panel>
                             </xmv-tabs>
                         `
-
+        const code_2 =
+                        `
+                            // JS
+                            const tabsModel_2 = ref('second')
+                            // Template
+                            <xmv-tabs v-model="tabsModel_2" type="card">
+                                <xmv-tab-panel label="User" name="first">User</xmv-tab-panel>
+                                <xmv-tab-panel label="Config" name="second">Config</xmv-tab-panel>
+                                <xmv-tab-panel label="Role" name="third">Role</xmv-tab-panel>
+                                <xmv-tab-panel label="Task" name="fourth">Task</xmv-tab-panel>
+                            </xmv-tabs>
+                        `
+        const code_3 =
+                        `
+                            // JS
+                            const tabsModel_3 = ref('third')
+                            // Template
+                            <xmv-tabs v-model="tabsModel_3" type="border-card">
+                                <xmv-tab-panel label="User" name="first">User</xmv-tab-panel>
+                                <xmv-tab-panel label="Config" name="second">Config</xmv-tab-panel>
+                                <xmv-tab-panel label="Role" name="third">Role</xmv-tab-panel>
+                                <xmv-tab-panel label="Task" name="fourth">Task</xmv-tab-panel>
+                            </xmv-tabs>
+                        `
+        const code_4 =
+                        `
+                            // JS
+                            const tabsModel_4 = ref('first')
+                            // Template
+                            <p>左方</p>
+                            <xmv-divider></xmv-divider>
+                            <xmv-tabs v-model="tabsModel_4" tab-position="left">
+                                <xmv-tab-panel label="User" name="first">User</xmv-tab-panel>
+                                <xmv-tab-panel label="Config" name="second">Config</xmv-tab-panel>
+                                <xmv-tab-panel label="Role" name="third">Role</xmv-tab-panel>
+                                <xmv-tab-panel label="Task" name="fourth">Task</xmv-tab-panel>
+                            </xmv-tabs>
+                            <p>右方</p>
+                            <xmv-divider></xmv-divider>
+                            <xmv-tabs v-model="tabsModel_4" tab-position="right">
+                                <xmv-tab-panel label="User" name="first">User</xmv-tab-panel>
+                                <xmv-tab-panel label="Config" name="second">Config</xmv-tab-panel>
+                                <xmv-tab-panel label="Role" name="third">Role</xmv-tab-panel>
+                                <xmv-tab-panel label="Task" name="fourth">Task</xmv-tab-panel>
+                            </xmv-tabs>
+                        `
+        let code_5 =
+                        `
+                            // JS
+                            const tabsModel_5 = ref('first')
+                            // Template
+                            <xmv-tabs v-model="tabsModel_5">
+                                <xmv-tab-panel label="User" name="first">
+                                    <template #label>
+                                        <span class="custom-tabs-label">
+                                            <xmv-icon name="calendar"></xmv-icon>
+                                            <span style="margin-left:5px">User</span>
+                                        </span>
+                                    </template>
+                                    User
+                                </xmv-tab-panel>
+                                <xmv-tab-panel label="Config" name="second">Config</xmv-tab-panel>
+                                <xmv-tab-panel label="Role" name="third">Role</xmv-tab-panel>
+                                <xmv-tab-panel label="Task" name="fourth">Task</xmv-tab-panel>
+                            </xmv-tabs>
+                        `
+        let code_6 =
+                        `
+                            // JS
+                            const tabsModel_5 = ref('first')
+                            const handleAdd = ()=>{
+                                list.value.push({
+                                    name : 'ADD' + i ,
+                                    label : 'Task' + i ,content: 'Tab ADD content' + i
+                                })
+                                i++
+                            }
+                            const handleRemove = (name)=>{
+                                console.log(name)
+                            }
+                            // Template
+                            <xmv-tabs v-model="tabsModel_5" type="card" 
+                                    editable @remove="handleRemove" @add="handleAdd">
+                                <xmv-tab-panel :label="tmp.label" :name="tmp.name" v-for="tmp in list">
+                                    {{ tmp.content }}
+                                </xmv-tab-panel>
+                            </xmv-tabs>
+                        `
         return {tabsModel_1,tabsModel_2,tabsModel_3,tabsModel_4,tabsModel_5,list,
-                tabPosition,handleAdd,handleRemove,
-                code_1}
+                handleAdd,handleRemove,
+                code_1,code_2,code_3,code_4,code_5,code_6}
     }
 })
 </script>
