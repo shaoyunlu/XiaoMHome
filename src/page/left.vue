@@ -118,6 +118,9 @@
                     <a href="#/dialog" class="link">
                         <p class="link-text">Dialog 对话框</p>
                     </a>
+                    <a href="#/drawer" class="link">
+                        <p class="link-text">Drawer 抽屉</p>
+                    </a>
                 </section>
             </div>
         </aside>

@@ -39,6 +39,7 @@ import pageHeaderVue from 'comp/pageHeader/index.vue'
 import tabsVue from 'comp/tabs/index.vue'
 import alertVue from 'comp/alert/index.vue'
 import dialogVue from 'comp/dialog/index.vue'
+import drawerVue from 'comp/drawer/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -78,7 +79,8 @@ const routes = [
     { path : '/pageHeader',component : pageHeaderVue },
     { path : '/tabs',component : tabsVue },
     { path : '/alert',component : alertVue },
-    { path : '/dialog',component : dialogVue }
+    { path : '/dialog',component : dialogVue },
+    { path : '/drawer',component : drawerVue }
 ]
 
 const router= createRouter({
