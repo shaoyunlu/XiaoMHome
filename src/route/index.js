@@ -38,6 +38,7 @@ import menuVue from 'comp/menu/index.vue'
 import pageHeaderVue from 'comp/pageHeader/index.vue'
 import tabsVue from 'comp/tabs/index.vue'
 import alertVue from 'comp/alert/index.vue'
+import dialogVue from 'comp/dialog/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -76,7 +77,8 @@ const routes = [
     { path : '/menu',component : menuVue },
     { path : '/pageHeader',component : pageHeaderVue },
     { path : '/tabs',component : tabsVue },
-    { path : '/alert',component : alertVue }
+    { path : '/alert',component : alertVue },
+    { path : '/dialog',component : dialogVue }
 ]
 
 const router= createRouter({

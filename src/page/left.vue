@@ -115,6 +115,9 @@
                     <a href="#/alert" class="link">
                         <p class="link-text">Alert 提示</p>
                     </a>
+                    <a href="#/dialog" class="link">
+                        <p class="link-text">Dialog 对话框</p>
+                    </a>
                 </section>
             </div>
         </aside>
