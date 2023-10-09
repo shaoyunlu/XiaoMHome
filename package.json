@@ -18,7 +18,7 @@
     "vue": "^3.2.47",
     "vue-router": "^4.2.2",
     "xiaomeng-dom-util": "^1.0.9",
-    "xiaomeng-vue-ui": "^0.1.91"
+    "xiaomeng-vue-ui": "^0.1.93"
   },
   "devDependencies": {
     "@vitejs/plugin-legacy": "^4.0.2",
