@@ -40,6 +40,7 @@ import tabsVue from 'comp/tabs/index.vue'
 import alertVue from 'comp/alert/index.vue'
 import dialogVue from 'comp/dialog/index.vue'
 import drawerVue from 'comp/drawer/index.vue'
+import loadingVue from 'comp/loading/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -80,7 +81,8 @@ const routes = [
     { path : '/tabs',component : tabsVue },
     { path : '/alert',component : alertVue },
     { path : '/dialog',component : dialogVue },
-    { path : '/drawer',component : drawerVue }
+    { path : '/drawer',component : drawerVue },
+    { path : '/loading',component : loadingVue }
 ]
 
 const router= createRouter({

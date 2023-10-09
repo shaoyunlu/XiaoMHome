@@ -121,6 +121,9 @@
                     <a href="#/drawer" class="link">
                         <p class="link-text">Drawer 抽屉</p>
                     </a>
+                    <a href="#/loading" class="link">
+                        <p class="link-text">Loading 加载</p>
+                    </a>
                 </section>
             </div>
         </aside>
