@@ -124,6 +124,9 @@
                     <a href="#/loading" class="link">
                         <p class="link-text">Loading 加载</p>
                     </a>
+                    <a href="#/message" class="link">
+                        <p class="link-text">Message 消息提示</p>
+                    </a>
                 </section>
             </div>
         </aside>
