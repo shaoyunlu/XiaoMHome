@@ -49,8 +49,7 @@ export default defineComponent({
 
         const open = ()=>{
             XmvMessage({
-                message : '这是一条消息提示。',
-                duration : 5000
+                message : '这是一条消息提示。'
             })
         }
 
