@@ -42,6 +42,7 @@ import dialogVue from 'comp/dialog/index.vue'
 import drawerVue from 'comp/drawer/index.vue'
 import loadingVue from 'comp/loading/index.vue'
 import messageVue from 'comp/message/index.vue'
+import messageBoxVue  from 'comp/messageBox/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -84,7 +85,8 @@ const routes = [
     { path : '/dialog',component : dialogVue },
     { path : '/drawer',component : drawerVue },
     { path : '/loading',component : loadingVue },
-    { path : '/message',component : messageVue }
+    { path : '/message',component : messageVue },
+    { path : '/messageBox',component : messageBoxVue }
 ]
 
 const router= createRouter({

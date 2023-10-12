@@ -127,6 +127,9 @@
                     <a href="#/message" class="link">
                         <p class="link-text">Message 消息提示</p>
                     </a>
+                    <a href="#/messageBox" class="link">
+                        <p class="link-text">MessageBox 消息弹框</p>
+                    </a>
                 </section>
             </div>
         </aside>
