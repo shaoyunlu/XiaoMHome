@@ -130,6 +130,9 @@
                     <a href="#/messageBox" class="link">
                         <p class="link-text">MessageBox 消息弹框</p>
                     </a>
+                    <a href="#/notification" class="link">
+                        <p class="link-text">Notification 通知</p>
+                    </a>
                 </section>
             </div>
         </aside>
