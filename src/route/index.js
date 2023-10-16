@@ -44,6 +44,8 @@ import loadingVue from 'comp/loading/index.vue'
 import messageVue from 'comp/message/index.vue'
 import messageBoxVue  from 'comp/messageBox/index.vue'
 import notificationVue  from 'comp/notification/index.vue'
+import popoverVue  from 'comp/popover/index.vue'
+import tooltipVue  from 'comp/tooltip/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -88,7 +90,9 @@ const routes = [
     { path : '/loading',component : loadingVue },
     { path : '/message',component : messageVue },
     { path : '/messageBox',component : messageBoxVue },
-    { path : '/notification',component : notificationVue }
+    { path : '/notification',component : notificationVue },
+    { path : '/popover',component : popoverVue },
+    { path : '/tooltip',component : tooltipVue }
 ]
 
 const router= createRouter({

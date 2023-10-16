@@ -133,6 +133,12 @@
                     <a href="#/notification" class="link">
                         <p class="link-text">Notification 通知</p>
                     </a>
+                    <a href="#/popover" class="link">
+                        <p class="link-text">Popover 气泡卡片</p>
+                    </a>
+                    <a href="#/tooltip" class="link">
+                        <p class="link-text">Tooltip 文字提示</p>
+                    </a>
                 </section>
             </div>
         </aside>
