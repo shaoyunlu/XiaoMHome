@@ -140,6 +140,12 @@
                         <p class="link-text">Tooltip 文字提示</p>
                     </a>
                 </section>
+                <section class="sidebar-group">
+                    <p class="sidebar-group__title">Others 其他</p>
+                    <a href="#/divider" class="link">
+                        <p class="link-text">Divider 分割线</p>
+                    </a>
+                </section>
             </div>
         </aside>
     </xmv-scrollbar>

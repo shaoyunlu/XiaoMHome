@@ -46,6 +46,7 @@ import messageBoxVue  from 'comp/messageBox/index.vue'
 import notificationVue  from 'comp/notification/index.vue'
 import popoverVue  from 'comp/popover/index.vue'
 import tooltipVue  from 'comp/tooltip/index.vue'
+import dividerVue  from 'comp/divider/index.vue'
 
 const routes = [
     { path : '/',component : indexVue },
@@ -92,7 +93,8 @@ const routes = [
     { path : '/messageBox',component : messageBoxVue },
     { path : '/notification',component : notificationVue },
     { path : '/popover',component : popoverVue },
-    { path : '/tooltip',component : tooltipVue }
+    { path : '/tooltip',component : tooltipVue },
+    { path : '/divider',component : dividerVue }
 ]
 
 const router= createRouter({
