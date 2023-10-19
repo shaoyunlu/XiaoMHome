@@ -10,6 +10,7 @@ import spaceVue from 'comp/space/index.vue'
 import checkboxVue from 'comp/checkbox/index.vue'
 import colorPickerVue from 'comp/colorPicker/index.vue'
 import datePickerVue from 'comp/datePicker/index.vue'
+import formVue from 'comp/form/index.vue'
 import inputVue from 'comp/input/index.vue'
 import inputNumberVue from 'comp/inputNumber/index.vue'
 import radioVue from 'comp/radio/index.vue'
@@ -58,6 +59,7 @@ const routes = [
     { path : '/checkbox',component : checkboxVue },
     { path : '/colorPicker',component : colorPickerVue },
     { path : '/datePicker',component : datePickerVue },
+    { path : '/form',component : formVue },
     { path : '/input',component : inputVue },
     { path : '/inputNumber',component : inputNumberVue },
     { path : '/radio',component : radioVue },

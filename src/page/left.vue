@@ -22,6 +22,9 @@
                     <a href="#/datePicker" class="link">
                         <p class="link-text">Date Picker 日期选择器</p>
                     </a>
+                    <a href="#/form" class="link">
+                        <p class="link-text">Form 表单</p>
+                    </a>
                     <a href="#/input" class="link">
                         <p class="link-text">Input 输入框</p>
                     </a>
