@@ -6,7 +6,7 @@
     <p text="sm"><p>通过 <code>row</code> 和 <code>col</code> 组件，
         并通过 col 组件的 <code>span</code> 属性我们就可以自由地组合布局。</p>
     </p>
-    <xmv-code>
+    <xmv-code :code="code_1">
         <xmv-row>
             <xmv-col :span="24"><div class="grid-content ep-bg-purple-dark" /></xmv-col>
         </xmv-row>
@@ -37,7 +37,7 @@
     <h2>分栏间隔</h2>
     <p>支持列间距。</p>
     <p text="sm"><p>行提供 <code>gutter</code> 属性来指定列之间的间距，其默认值为0。</p></p>
-    <xmv-code>
+    <xmv-code :code="code_2">
         <xmv-row :gutter="20">
             <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
             <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
@@ -47,7 +47,7 @@
     </xmv-code>
     <h2>混合布局</h2>
     <p>通过基础的 1/24 分栏任意扩展组合形成较为复杂的混合布局。</p>
-    <xmv-code>
+    <xmv-code :code="code_3">
         <xmv-row :gutter="20">
             <xmv-col :span="16"><div class="grid-content ep-bg-purple" /></xmv-col>
             <xmv-col :span="8"><div class="grid-content ep-bg-purple" /></xmv-col>
@@ -67,7 +67,7 @@
     <h2>列偏移</h2>
     <p>您可以指定列偏移量。</p>
     <p text="sm"><p>通过制定 col 组件的 <code>offset</code> 属性可以指定分栏偏移的栏数。</p></p>
-    <xmv-code>
+    <xmv-code :code="code_4">
         <xmv-row :gutter="20">
             <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
             <xmv-col :span="6" :offset="6"><div class="grid-content ep-bg-purple"/></xmv-col>
@@ -85,7 +85,7 @@
     <p text="sm"><p>您可以通过<code>justify</code> 属性来定义子元素的排版方式，
         其取值为start、center、end、space-between、space-around或space-evenly。</p>
     </p>
-    <xmv-code>
+    <xmv-code :code="code_5">
         <xmv-row class="row-bg">
             <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
             <xmv-col :span="6"><div class="grid-content ep-bg-purple-light" /></xmv-col>
@@ -124,7 +124,111 @@ import {defineComponent} from 'vue'
 export default defineComponent({
     name:"",
     setup(props ,context) {
-        return {}
+
+        const code_1 =
+                        `
+                            <xmv-row>
+                                <xmv-col :span="24"><div class="grid-content ep-bg-purple-dark" /></xmv-col>
+                            </xmv-row>
+                            <xmv-row>
+                                <xmv-col :span="12"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="12"><div class="grid-content ep-bg-purple-light" /></xmv-col>
+                            </xmv-row>
+                            <xmv-row>
+                                <xmv-col :span="8"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="8"><div class="grid-content ep-bg-purple-light" /></xmv-col>
+                                <xmv-col :span="8"><div class="grid-content ep-bg-purple" /></xmv-col>
+                            </xmv-row>
+                            <xmv-row>
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple-light" /></xmv-col>
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple-light" /></xmv-col>
+                            </xmv-row>
+                            <xmv-row>
+                                <xmv-col :span="4"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="4"><div class="grid-content ep-bg-purple-light" /></xmv-col>
+                                <xmv-col :span="4"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="4"><div class="grid-content ep-bg-purple-light" /></xmv-col>
+                                <xmv-col :span="4"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="4"><div class="grid-content ep-bg-purple-light" /></xmv-col>
+                            </xmv-row>
+                        `
+        const code_2 =
+                        `
+                            <xmv-row :gutter="20">
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
+                            </xmv-row>
+                        `
+        const code_3 =
+                        `
+                            <xmv-row :gutter="20">
+                                <xmv-col :span="16"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="8"><div class="grid-content ep-bg-purple" /></xmv-col>
+                            </xmv-row>
+                            <xmv-row :gutter="20">
+                                <xmv-col :span="8"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="8"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="4"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="4"><div class="grid-content ep-bg-purple" /></xmv-col>
+                            </xmv-row>
+                            <xmv-row :gutter="20">
+                                <xmv-col :span="4"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="16"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="4"><div class="grid-content ep-bg-purple" /></xmv-col>
+                            </xmv-row>
+                        `
+        const code_4 =
+                        `
+                            <xmv-row :gutter="20">
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="6" :offset="6"><div class="grid-content ep-bg-purple"/></xmv-col>
+                            </xmv-row>
+                            <xmv-row :gutter="20">
+                                <xmv-col :span="6" :offset="6"><div class="grid-content ep-bg-purple"/></xmv-col>
+                                <xmv-col :span="6" :offset="6"><div class="grid-content ep-bg-purple"/></xmv-col>
+                            </xmv-row>
+                            <xmv-row :gutter="20">
+                                <xmv-col :span="12" :offset="6"><div class="grid-content ep-bg-purple"/></xmv-col>
+                            </xmv-row>
+                        `
+        const code_5 =
+                        `
+                            <xmv-row class="row-bg">
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple-light" /></xmv-col>
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
+                            </xmv-row>
+                            <xmv-row class="row-bg" justify="center">
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple-light" /></xmv-col>
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
+                            </xmv-row>
+                            <xmv-row class="row-bg" justify="end">
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple-light" /></xmv-col>
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
+                            </xmv-row>
+                            <xmv-row class="row-bg" justify="space-between">
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple-light" /></xmv-col>
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
+                            </xmv-row>
+                            <xmv-row class="row-bg" justify="space-around">
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple-light" /></xmv-col>
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
+                            </xmv-row>
+                            <xmv-row class="row-bg" justify="space-evenly">
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple-light" /></xmv-col>
+                                <xmv-col :span="6"><div class="grid-content ep-bg-purple" /></xmv-col>
+                            </xmv-row>
+                        `
+        return {code_1,code_2,code_3,code_4,code_5}
     }
 })
 </script>
