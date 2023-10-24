@@ -1,7 +1,6 @@
 <template>
-    <div class="">
-        这是一个首页的介绍哈
-    </div>
+    <h1>Xiaomeng-Vue-UI</h1>
+    <p>一个基于 vue3 的前端 UI 框架。</p>
 </template>
 
 <script>
