@@ -4,8 +4,9 @@
             <div class="navbar-wrapper">
                 <div class="header-container">
                     <div class="logo-container">
-                        <a href="/#" data-v-74f3ae96="">
+                        <a href="#">
                             <img class="logo" src="/xmv-logo.svg" alt="Element Plus Logo" data-v-74f3ae96="">
+                            <span>Xiaomeng-Vue-UI</span>
                         </a>
                     </div>
                     <div class="content"></div>

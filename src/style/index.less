@@ -176,9 +176,20 @@ main {
     height: var(--header-height);
 }
 
-.logo-container>a{
+.logo-container > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container > a > img {
     height: 36px;
     width: 36px;
+}
+
+.logo-container > a > span {
+    margin-left: 10px;
+    font-weight: bold;
 }
 
 .logo-container .logo {
