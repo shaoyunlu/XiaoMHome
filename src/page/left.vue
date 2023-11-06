@@ -149,6 +149,9 @@
                     <a href="#/divider" class="link">
                         <p class="link-text">Divider 分割线</p>
                     </a>
+                    <a href="#/watermark" class="link">
+                        <p class="link-text">Watermark 水印</p>
+                    </a>
                 </section>
             </div>
         </aside>
